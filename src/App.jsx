@@ -1,11 +1,15 @@
+import Cabecalho from "./components/layout/Cabecalho";
+import Conteudo from "./components/layout/Conteudo";
+import Rodape from "./components/layout/Rodape";
 
-function App() {
-  return ( 
-    <div>
-    <h1>Olá, Mundo!</h1>
-    <h2>Aprendendo React!</h2>
-    </div>
+const App = () => {
+  return (
+    <>
+      <Cabecalho />
+      <Conteudo />
+      <Rodape />
+    </>
   );
-}
+};
 
 export default App;
