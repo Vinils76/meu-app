@@ -5,6 +5,7 @@ const cursos = ["HTML5", "CSS", "REACT"];
 const Conteudo = () => {
   const artigos = [
     {
+      id: 1,
       titulo: "Artigo 1",
       subtitulo: "Esse é o subtitulo do artigo 1",
       texto: "Este é o conteúdo",
@@ -12,6 +13,7 @@ const Conteudo = () => {
     },
 
     {
+      id: 2,
       titulo: "Artigo 2",
       subtitulo: "Esse é o subtitulo do artigo 2",
       texto: "Este é o conteúdo",
@@ -19,6 +21,7 @@ const Conteudo = () => {
     },
 
     {
+      id: 3,
       titulo: "Artigo 3",
       subtitulo: "Esse é o subtitulo do artigo 3",
       texto: "Este é o conteúdo",
@@ -39,6 +42,7 @@ const Conteudo = () => {
 
         {artigos.map((artigo) => (
           <Artigo
+            key={artigo.id}
             titulo={artigo.titulo}
             subtitulo={artigo.subtitulo}
             curso={artigo.curso}
