@@ -12,9 +12,9 @@ const Conteudo = () => {
           similique eligendi unde quaerat!
         </p>
 
-        <Artigo />
-        <Artigo />
-        <Artigo />
+        <Artigo>Texto do primeiro artigo</Artigo>
+        <Artigo>Texto do segundo artigo</Artigo>
+        <Artigo>Texto do terceiro artigo</Artigo>
       </section>
     </main>
   );
