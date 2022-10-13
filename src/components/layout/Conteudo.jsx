@@ -3,6 +3,29 @@ import Artigo from "../Artigo";
 const cursos = ["HTML5", "CSS", "REACT"];
 
 const Conteudo = () => {
+  const artigos = [
+    {
+      titulo: "Artigo 1",
+      subtitulo: "Esse é o subtitulo do artigo 1",
+      texto: "Este é o conteúdo",
+      curso: "Js avançado",
+    },
+
+    {
+      titulo: "Artigo 2",
+      subtitulo: "Esse é o subtitulo do artigo 2",
+      texto: "Este é o conteúdo",
+      curso: "React",
+    },
+
+    {
+      titulo: "Artigo 3",
+      subtitulo: "Esse é o subtitulo do artigo 3",
+      texto: "Este é o conteúdo",
+      curso: "Node.js",
+    },
+  ];
+
   return (
     <main>
       <section>
@@ -14,27 +37,17 @@ const Conteudo = () => {
           similique eligendi unde quaerat!
         </p>
 
-        <Artigo
-          titulo="Artigo1"
-          subtitulo="Subtitulo do artigo 1"
-          curso={cursos[0]}
-        >
-          Texto do primeiro artigo
-        </Artigo>
-        <Artigo
-          titulo="Artigo2"
-          subtitulo="Subtitulo do artigo 2"
-          curso={cursos[1]}
-        >
-          Texto do segundo artigo
-        </Artigo>
-        <Artigo
-          titulo="Artigo3"
-          subtitulo="Subtitulo do artigo 3"
-          curso={cursos[2]}
-        >
-          Texto do terceiro artigo
-        </Artigo>
+        {artigos.map((artigo) => {
+          return (
+            <Artigo
+              titulo={artigo.titulo}
+              subtitulo={artigo.subtitulo}
+              curso={artigo.curso}
+            >
+              {artigo.texto}
+            </Artigo>
+          );
+        })}
       </section>
     </main>
   );
